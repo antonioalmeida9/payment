@@ -1,6 +1,6 @@
 module.exports = {
 
-    get: async (connection) => {
+    get: (connection) => {
         return new Promise((resolve, reject) => {
             connection.query(`CALL filterTodo()`, (error, results, fields) => {
                 if(error) {
