@@ -14,6 +14,7 @@ module.exports = {
             sql.release();
 
         } catch (e) {
+            sql.release();
             res.status(500).json({ 'error': e.message });
         }
     },
